@@ -12,5 +12,9 @@ public class Node<T> {
 		this.data = data;
 		next = n;
 	}
+	
+	public T getData(Node<T> top){
+		return this.data;
+	}
 
 }

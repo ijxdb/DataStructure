@@ -8,7 +8,10 @@ public class ListStack<T> implements StackInterface<T>{
 	}
 	
 	public boolean isEmpty(){
-		return false;
+		if(top == null)
+			return true;
+		else
+			return false;
 	}
 	
 	public T pop() throws StackException{
@@ -16,7 +19,8 @@ public class ListStack<T> implements StackInterface<T>{
 	}
 	
 	public T peek() throws StackException{
-		return null;
+		if(isEmpty()) throw new StackException("Stack is empty.");
+		return top.getData(top);
 	}
 	
 	public void push(T e) throws StackException{
@@ -24,11 +28,16 @@ public class ListStack<T> implements StackInterface<T>{
 	}
 	
 	public void clear(){
+		top = null;
 		
 	}
 	
 	public String display(){
 		return null;
+	}
+	
+	public static void main(String[] args){
+		
 	}
 
 }
