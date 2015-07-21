@@ -6,4 +6,5 @@ basic data structure as a team.
 
 More information about is available at:
 Ankur Goyal: http://itlab.uta.edu/students/current/MS/Ankur_Goyal/index.html
+
 Jay D. Bodra: http://itlab.uta.edu/students/current/MS/Jay_D_Bodra/index.html
