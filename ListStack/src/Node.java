@@ -13,8 +13,12 @@ public class Node<T> {
 		next = n;
 	}
 	
-	public T getData(Node<T> top){
-		return this.data;
+	public T getData(Node<T> e){
+		return e.data;
+	}
+	
+	public Node<T> getNext(Node<T> e){
+		return e.next;
 	}
 
 }

@@ -10,8 +10,7 @@ public class ListStack<T> implements StackInterface<T>{
 	public boolean isEmpty(){
 		if(top == null)
 			return true;
-		else
-			return false;
+		return false;
 	}
 	
 	public T pop() throws StackException{
@@ -24,7 +23,7 @@ public class ListStack<T> implements StackInterface<T>{
 	}
 	
 	public void push(T e) throws StackException{
-		
+		top = new Node<T>(e, top);
 	}
 	
 	public void clear(){
@@ -33,11 +32,35 @@ public class ListStack<T> implements StackInterface<T>{
 	}
 	
 	public String display(){
-		return null;
+		if(isEmpty())
+			return "[ ]";
+		StringBuffer stackElements = new StringBuffer("[");
+		Node<T> temp = top;
+		while(temp != null){
+			stackElements.append(temp.getData(temp)+"->");
+			temp = temp.getNext(temp);
+		}
+		stackElements.append("]");
+		return stackElements.toString();
 	}
 	
 	public static void main(String[] args){
-		
+		ListStack<Integer> s = new ListStack<Integer>();
+
+	      try
+	      {
+
+	         for(int i = 0; i < 6; i++) s.push(i);
+
+	         //s.clear();
+	         System.out.println(s);
+	         String stack = s.display();
+	         System.out.println(stack);
+	      }
+	      catch (StackException e)
+	      {
+	         System.err.println(e);
+	      }
 	}
 
 }
