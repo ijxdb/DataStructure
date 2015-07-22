@@ -14,7 +14,10 @@ public class ListStack<T> implements StackInterface<T>{
 	}
 	
 	public T pop() throws StackException{
-		return null;
+		if(isEmpty()) throw new StackException("Stack is empty.");
+		T data = top.getData(top);
+		top = top.getNext(top);
+		return data;
 	}
 	
 	public T peek() throws StackException{
@@ -28,10 +31,9 @@ public class ListStack<T> implements StackInterface<T>{
 	
 	public void clear(){
 		top = null;
-		
 	}
 	
-	public String display(){
+	public String displayStack(){
 		if(isEmpty())
 			return "[ ]";
 		StringBuffer stackElements = new StringBuffer("[");
@@ -40,22 +42,31 @@ public class ListStack<T> implements StackInterface<T>{
 			stackElements.append(temp.getData(temp)+"->");
 			temp = temp.getNext(temp);
 		}
-		stackElements.append("]");
+		stackElements.append("\b"+"\b"+"]");
 		return stackElements.toString();
+	}
+	
+	public void printStack(){
+		 String stack = displayStack();
+		 System.out.println(stack);
 	}
 	
 	public static void main(String[] args){
 		ListStack<Integer> s = new ListStack<Integer>();
-
 	      try
 	      {
 
 	         for(int i = 0; i < 6; i++) s.push(i);
 
 	         //s.clear();
-	         System.out.println(s);
-	         String stack = s.display();
-	         System.out.println(stack);
+	         //System.out.println(s);
+	         s.printStack();
+	         
+	         s.pop();
+	         
+	         s.printStack();
+	         
+	         s.peek();
 	      }
 	      catch (StackException e)
 	      {

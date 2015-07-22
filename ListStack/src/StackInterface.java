@@ -11,6 +11,6 @@ interface StackInterface<T> {
 	
 	public void clear();
 	
-	public String display();
+	public String displayStack();
 	
 }
