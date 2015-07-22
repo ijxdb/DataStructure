@@ -1,5 +1,6 @@
 
-class StackException extends RuntimeException {
+@SuppressWarnings("serial")
+public class StackException extends RuntimeException {
 
 	public StackException(String name)
 	{
