@@ -51,22 +51,33 @@ public class ListStack<T> implements StackInterface<T>{
 		 System.out.println(stack);
 	}
 	
+	// Not used as of now....
+	public void displayElement(Node<T> e) throws StackException{
+		if(isEmpty()) throw new StackException("Stack is empty");
+		StringBuffer element = new StringBuffer();
+		Node<T> temp = e;
+		element.append(temp.getData(temp));
+		System.out.println(element.toString());
+	}
+
+	
 	public static void main(String[] args){
 		ListStack<Integer> s = new ListStack<Integer>();
+		//ListStack<String> s1 = new ListStack<String>();
 	      try
 	      {
 
-	         for(int i = 0; i < 6; i++) s.push(i);
+	         for(int i = 0; i < 6; i++) s.push(i);//s1.push(String.valueOf(i));
 
 	         //s.clear();
 	         //System.out.println(s);
-	         s.printStack();
+	         s.printStack();//s1.printStack();
 	         
-	         s.pop();
+	         System.out.println(s.pop());//System.out.println(s1.pop());
 	         
-	         s.printStack();
+	         s.printStack(); // s1.printStack();
 	         
-	         s.peek();
+	         System.out.println(s.peek());//System.out.println(s1.peek());
 	      }
 	      catch (StackException e)
 	      {
