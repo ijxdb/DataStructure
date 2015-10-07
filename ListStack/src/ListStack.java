@@ -15,7 +15,7 @@ public class ListStack<T> implements StackInterface<T>{
 	
 	public T pop() throws StackException{
 		if(isEmpty()) throw new StackException("Stack is empty.");
-		T data = top.getData(top);
+		T data = top.getData(top); // can use peek()
 		top = top.getNext(top);
 		return data;
 	}
