@@ -13,6 +13,7 @@ public class Node<T> {
 		next = n;
 	}
 	
+	// added and used by displayStack
 	public T getData(Node<T> e){
 		return e.data;
 	}
