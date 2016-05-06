@@ -21,5 +21,4 @@ public class Node<T> {
 	public Node<T> getNext(Node<T> e){
 		return e.next;
 	}
-
 }
