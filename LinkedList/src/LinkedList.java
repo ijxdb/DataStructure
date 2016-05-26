@@ -102,7 +102,7 @@ public class LinkedList<T> implements ListInterface<T> {
 			while (counter < location) {
 				previous = current;
 				current = current.getNext();
-				counter += counter;
+				counter += 1;
 			}
 			previous.setNext(current.getNext());
 		}
