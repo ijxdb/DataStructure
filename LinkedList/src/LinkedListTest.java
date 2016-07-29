@@ -96,6 +96,20 @@ public class LinkedListTest {
 		listInteger.removeByLocation(1);
 		System.out.println(listInteger.toString());
 		// list.displayList();
+		
+		
+		System.out.println("\n\n\n************TEST-3***************");
+		System.out.println("Testing two list are equal or not");
+		LinkedList<Integer> listInteger1 = new LinkedList<Integer>();
+		LinkedList<Integer> listInteger2 = new LinkedList<Integer>();
+		listInteger1.add(5);
+		listInteger1.add(2);
+		listInteger1.add(3);
+		listInteger2.add(1);
+		listInteger2.add(2);
+		System.out.println(listInteger1.equals(listInteger2));
+		listInteger1.insert(4, 1);
+		System.out.println(listInteger1);
 
 	}
 }

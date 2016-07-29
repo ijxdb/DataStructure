@@ -5,6 +5,7 @@ public class ZigzagConversion {
 		
 		//input array example; input=1,2,3,4; output=1,3,2,4
 		int []arr = {4,2,3,4,7,6,5,9,1,2};
+		//int[] arr = {3, 5, 2, 1, 6, 4};
 		boolean flag=true;
 		
 		for(int i=1; i<arr.length; i++)
